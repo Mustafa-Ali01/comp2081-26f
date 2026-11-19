@@ -45,4 +45,25 @@ p#translate:hover {
 }
 p#animate {
     background-color: teal;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        background-color: teal;
+    }
+    33% {
+        transform: rotate(120deg);
+        background-color: gold;
+    }
+    66% {
+        transform: rotate(240deg);
+        background-color: tomato;
+    }
+    100% {
+        transform: rotate(360deg);
+        background-color: teal;
+    }
 }
