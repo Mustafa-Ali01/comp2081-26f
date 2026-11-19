@@ -14,16 +14,32 @@ p {
 p#rotate {
     background-color: orange;
     transform: rotate(10deg);
+    transition: transform 1s;
 }
 p#scale {
     background-color: purple;
     transform: scale(0.8);
+    transition: transform 1s;
 }
 p#skew {
     background-color: limegreen;
     transform: skew(10deg);
+    transition: transform 1s;
 }
 p#translate {
     background-color: hotpink;
     transform: translate(20px);
+    transition: transform 1s;
+}
+p#rotate:hover {
+    transform: rotate(45deg);
+}
+p#scale:hover {
+    transform: scale(1.2);
+}
+p#skew:hover {
+    transform: skew(30deg);
+}
+p#translate:hover {
+    transform: translate(100px);
 }
