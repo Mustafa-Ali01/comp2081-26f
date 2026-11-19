@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+body {
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+}
+p {
+    height: 100px;
+    width: 100px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+p#rotate {
+    background-color: orange;
+}
+p#scale {
+    background-color: purple;
+}
+p#skew {
+    background-color: limegreen;
+}
+p#translate {
+    background-color: hotpink;
+}
