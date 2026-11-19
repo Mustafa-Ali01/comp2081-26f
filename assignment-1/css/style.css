@@ -1,0 +1,214 @@
+/*  Assignment 1 */
+/* www.rgbbirdflop.com is the website i used for colors*/
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  background: #fff;
+  color: #1b3768;
+  font-family: "Libre Franklin";
+}h1,h2,h3,.brand {
+  font-family: "Marcellus";
+  font-weight: normal;
+}
+
+a {
+  color: #1b3768;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 5%;
+  border-bottom: 1px solid #e3e7ef;
+}
+
+.main-nav {
+  flex-basis: 100%;
+}
+
+.main-nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.5rem 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  border-bottom: 2px solid #1b3768;
+}
+
+.main-nav .nav-button {
+  padding: 0.5rem 1rem;
+  background: #1b3768;
+  color: #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand img {
+  width: 40px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "welcome"
+    "services"
+    "process"
+    "arms"
+    "visit";
+  gap: 3rem;
+  padding: 2rem 5%;
+}
+
+.welcome {
+  grid-area: welcome;
+  text-align: center;
+}
+
+.services {
+  grid-area: services;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.cards article {
+  padding: 1.5rem;
+  border: 1px solid #e3e7ef;
+}
+
+.cards article:first-child {
+  background: #1b3768;
+  color: #fff;
+}
+
+.process {
+  grid-area: process;
+  background: #eef1f6;
+  padding: 2rem;
+}
+
+.steps {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.steps li {
+  flex-grow: 1;
+  flex-basis: 12rem;
+  border-top: 2px solid #1b3768;
+}
+
+.arms {
+  grid-area: arms;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.arms figure {
+  margin: 0;
+  text-align: center;
+}
+
+.arms img {
+  max-width: 250px;
+}
+
+.arms figcaption {
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.visit {
+  grid-area: visit;
+  background: #1b3768;
+  color: #fff;
+  padding: 2rem;
+}
+
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 5%;
+  border-top: 1px solid #e3e7ef;
+}
+
+@media screen and (min-width: 768px) {
+  .main-nav {
+    flex-basis: auto;
+    margin-left: auto;
+  }
+
+  .main-nav ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .arms {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "welcome  welcome"
+      "services services"
+      "process  process"
+      "arms     visit";
+  }
+
+  .cards {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .cards article:first-child {
+    grid-row: 1 / 3;
+  }
+
+  .arms p {
+    column-count: 2;
+    column-gap: 5%;
+    column-rule: 1px solid #e3e7ef;
+  }
+}
