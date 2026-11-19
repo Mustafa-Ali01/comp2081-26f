@@ -43,3 +43,6 @@ p#skew:hover {
 p#translate:hover {
     transform: translate(100px);
 }
+p#animate {
+    background-color: teal;
+}
